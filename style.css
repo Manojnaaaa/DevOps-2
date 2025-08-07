@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: lightgray;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: darkslategray;
+  width: 200px;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  padding: 30px;
+  background: white;
+}
+
+.main h1 {
+  margin-bottom: 25px;
+  color: black;
+}
+
+/* Time Slots */
+.time-slot {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.time {
+  width: 100px;
+  font-weight: bold;
+  color: dimgray;
+}
+
+.task {
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  flex-grow: 1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Pastel-ish task colors with named colors */
+.study {
+  background-color: lightsteelblue; /* soft blue */
+}
+
+.exercise {
+  background-color: palegreen; /* soft green */
+}
+
+.chill {
+  background-color: thistle; /* soft purple */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    text-align: center;
+  }
+  .time-slot {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .time {
+    margin-bottom: 5px;
+  }
+}
